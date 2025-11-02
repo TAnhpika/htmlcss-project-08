@@ -64,6 +64,7 @@ body {
   font-size: 1.6rem;
   font-family: Gordita, sans-serif;
   color: var(--text-color);
+  background: var(--body-bg);
 }
 
 a {
@@ -1120,15 +1121,22 @@ button, input, textarea, select {
 html {
   --text-color: #1A162E;
   --icon-color: brightness(0) saturate(100%) invert(7%) sepia(18%) saturate(2901%) hue-rotate(216deg) brightness(94%) contrast(95%);
+  --body-bg: #F6F6F6;
   --header-bg-color: #eee;
   --top-act-group-bg-color: #fff;
   --top-act-group-shadow: rgba(237, 237, 246, 0.2);
   --top-act-group-separate: #ededf6;
 }
+@media (max-width: 991.98px) {
+  html {
+    --header-bg-color: #fff;
+  }
+}
 
 html.dark {
   --text-color: #FFFFFF;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(158deg) brightness(101%) contrast(103%);
+  --body-bg: #292E39;
   --header-bg-color: #171C28;
   --top-act-group-bg-color: #292E39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.20);
@@ -1154,6 +1162,7 @@ html.dark {
 }
 @media (max-width: 575.98px) {
   .top-bar {
+    justify-content: space-between;
     padding: 16px 0;
   }
 }
@@ -1195,6 +1204,11 @@ html.dark {
 .top-act {
   column-gap: 20px;
   margin-left: auto;
+}
+@media (max-width: 575.98px) {
+  .top-act {
+    margin-left: 0;
+  }
 }
 .top-act__group {
   min-width: 50px;
@@ -1247,7 +1261,12 @@ html.dark {
 @media (max-width: 991.98px) {
   .logo {
     column-gap: 10px;
-    margin-left: 39px;
+    margin-left: 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  .logo {
+    margin-left: 0px;
   }
 }
 .logo__title {
