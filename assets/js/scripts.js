@@ -169,6 +169,13 @@ function initJsToggle() {
     });
 }
 
+/**
+ * Hàm đóng mở sub-menu
+ *
+ * Cách dùng:
+ * <button class="js-toggle" toggle-target="#box">Click</button>
+ * <div id="box">Content show/hide</div>
+ */
 window.addEventListener("template-loaded", () => {
     const links = $$(".js-dropdown-list > li > a");
 
