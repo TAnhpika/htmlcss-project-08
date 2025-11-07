@@ -148,7 +148,7 @@
             }
 
             @include abstracts.screen(sm) {
-                font-size: 1.6rem; //avoid zoom on iphone when font-size too small
+                font-size: 1.6rem !important; //avoid zoom on iphone when font-size too small
             }
         }
 
