@@ -44,35 +44,39 @@
 .btn {
     display: flex;
     align-items: center;
-
+    justify-content: center;
+    gap: 10px;
+    
     height: 44px;
     border-radius: 6px;
     padding: 0 20px;
 
-    background: #F8F8FB;
+    background: #f8f8fb;
 
     font-size: 1.8rem;
     font-weight: 500;
     user-select: none;
 
     .btn + .btn {
-        margin-left: 20px;
+        &:not(.btn--no-margin) {
+            margin-left: 20px;
+        }
     }
 
     &--text {
-        color: #9E9DA8;
+        color: #9e9da8;
         font-weight: 400;
         background: transparent;
     }
 
     &--primary {
-        color: #1A162E;
-        background: #FFB700;
+        color: #1a162e;
+        background: #ffb700;
     }
 
     &--outline {
         background: transparent;
-        border: 1px solid #D2D1D6;
+        border: 1px solid #d2d1d6;
     }
 
     &--rounded {
