@@ -33,7 +33,7 @@
                 <p class="auth__intro-text">The best of luxury brand values, high quality products, and innovative services</p>
 
                 <button class="auth__intro-next d-none d-md-flex js-toggle" toggle-target="#auth-content">
-                    <img src="./assets/icons/intro-arrow.svg" alt="">
+                    <img src="./assets/icons/intro-arrow.svg" alt="" />
                 </button>
             </div>
 
@@ -51,27 +51,33 @@
                     <form action="./index-logined.html" class="form auth__form">
                         <div class="form__group">
                             <div class="form__text-input">
-                                <input type="email" name="" id="" placeholder="Email" class="form__input" />
+                                <input type="email" name="" id="" placeholder="Email" class="form__input" required />
                                 <img src="./assets/icons/message.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                             </div>
+                            <p class="form__error">Email is invalid format</p>
                         </div>
                         <div class="form__group">
                             <div class="form__text-input">
-                                <input type="password" name="" id="" placeholder="Password" class="form__input" />
+                                <input type="password" name="" id="" placeholder="Password" class="form__input" required minlength="6" />
                                 <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                             </div>
+                            <p class="form__error">Password at least 6 characters</p>
                         </div>
                         <div class="form__group">
                             <div class="form__text-input">
-                                <input type="password" name="" id="" placeholder="Confirm password" class="form__input" />
+                                <input type="password" name="" id="" placeholder="Confirm password" class="form__input" required minlength="6" />
                                 <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                             </div>
+                            <p class="form__error">Password at least 6 characters</p>
                         </div>
 
                         <div class="form__group form__group--inline">
                             <!-- Not use 'for': user click inside elements -> auto check parent -->
                             <label class="form__checkbox">
-                                <input type="checkbox" name="" id="" class="form__checkbox-input" />
+                                <input type="checkbox" name="" id="" class="form__checkbox-input d-none" checked />
                                 <span class="form__checkbox-label">Set as default card</span>
                             </label>
 
@@ -79,10 +85,10 @@
                         </div>
 
                         <div class="form__group auth__btn-group">
-                            <button class="btn btn--primary auth__btn">Sign Up</button>
+                            <button class="btn btn--primary auth__btn form__submit-btn">Sign Up</button>
                             <button class="btn btn--outline auth__btn btn--no-margin">
                                 <img src="./assets/icons/google.svg" alt="" class="btn__icon" />
-                                Sign in with Gmail
+                                Sign in with Google
                             </button>
                         </div>
                     </form>
