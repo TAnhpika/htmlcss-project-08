@@ -62,7 +62,9 @@ html {
     // Product detail
     --product-page-bg: #fff;
     --product-detail-info-bg: #f6f6f6;
-    
+    --product-detail-info-content-bg: #fff;
+    --product-detail-tag-bg: #ededf6;
+
     @include abstracts.screen(md) {
         --product-page-bg: #fafafd;
         --product-detail-info-bg: #fff;
@@ -70,8 +72,12 @@ html {
 
     // Breadcrumbs
     --breadcrumbs-bg: #f6f6f6;
+    --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
+
     @include abstracts.screen(md) {
         --breadcrumbs-bg: #fff;
     }
-    --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
+
+    // Search bar
+    --search-bar-bg: #fff;
 }
