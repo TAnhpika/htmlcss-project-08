@@ -1330,6 +1330,14 @@ html {
   --search-bar-bg: #fff;
   --review-card-bg: #fafafd;
 }
+@media (max-width: 767.98px) {
+  html {
+    --review-card-bg: #fff;
+  }
+}
+html {
+  --text-content-hr-bg: #ebebeb;
+}
 
 html.dark {
   --text-color: #ffffff;
@@ -1394,6 +1402,8 @@ html.dark {
 }
 html.dark {
   --search-bar-bg: #171c28;
+  --review-card-bg: #171c28;
+  --text-content-hr-bg: #3e4043;
 }
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -2789,7 +2799,7 @@ html.dark {
 .text-content h4,
 .text-content h5,
 .text-content h6 {
-  font-weight: 500;
+  font-weight: 600;
 }
 .text-content h1 {
   font-size: 2.6rem;
@@ -2835,13 +2845,13 @@ html.dark {
   text-align: center;
 }
 .text-content a {
-  color: rgb(255, 183, 0);
+  color: #0071dc;
   text-decoration: underline;
 }
 .text-content blockquote {
-  background: rgba(255, 183, 0, 0.1);
+  background: rgba(119, 218, 230, 0.1);
   padding: 20px;
-  border-left: 3px solid #ffb700;
+  border-left: 3px solid #77dae6;
 }
 .text-content blockquote p {
   margin: 0;
@@ -2850,7 +2860,7 @@ html.dark {
   border: none;
   height: 1.5px;
   margin: 40px 0;
-  background: #ebebeb;
+  background: var(--text-content-hr-bg);
 }
 
 .home {
@@ -3285,7 +3295,7 @@ html.dark {
   cursor: pointer;
 }
 .prod-tab__item--current {
-  color: #1a162e;
+  color: inherit;
 }
 .prod-tab__contents {
   padding-top: 30px;
@@ -3296,11 +3306,14 @@ html.dark {
 .prod-tab__content--current {
   display: block;
 }
+.prod-tab__text-content {
+  margin-top: -20px;
+}
 
 .prod-content__heading {
   margin-bottom: 30px;
-  font-size: 2.4rem;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 600;
   line-height: 141.667%;
 }
 
