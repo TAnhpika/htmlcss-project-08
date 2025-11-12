@@ -1277,6 +1277,7 @@ html {
 html {
   --header-act-dropdown-bg: #fff;
   --header-act-dropdown-shadow: rgba(200, 200, 200, 0.40);
+  --header-act-dropdown-border-color: #d2d1d6;
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
   --top-menu-border-color: #d2d1d6;
@@ -1358,6 +1359,9 @@ html.dark {
   }
 }
 html.dark {
+  --header-act-dropdown-bg: #2f3441;
+  --header-act-dropdown-shadow: rgba(23, 28, 40, 0.40);
+  --header-act-dropdown-border-color: #171c28;
   --dropdown-bg-color: #2f3441;
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
   --dropdown-arrow-color: brightness(0) saturate(100%) invert(19%) sepia(17%) saturate(603%) hue-rotate(185deg) brightness(96%) contrast(95%);
@@ -1619,8 +1623,13 @@ html.dark {
 .top-act__group--single .top-act__btn {
   padding: 13px;
 }
-.top-act__btn {
+.top-act__btn-wrap {
   position: relative;
+}
+.top-act__btn-wrap:hover .act-dropdown {
+  display: block;
+}
+.top-act__btn {
   column-gap: 10px;
   padding: 13px 20px;
   cursor: pointer;
@@ -1665,16 +1674,26 @@ html.dark {
 }
 
 .act-dropdown {
+  display: none;
   position: absolute;
-  top: 60px;
+  top: 48px;
   right: -60px;
+  padding-top: 28px;
   width: min(500px, 100vw);
 }
 .act-dropdown__inner {
+  position: relative;
   padding: 30px;
   border-radius: 20px;
   background: var(--header-act-dropdown-bg);
   box-shadow: 0 40px 90px 20px var(--header-act-dropdown-shadow);
+}
+.act-dropdown__arrow {
+  position: absolute;
+  top: -17px;
+  right: 90px;
+  height: 20.5px;
+  filter: var(--dropdown-arrow-color);
 }
 .act-dropdown__top {
   display: flex;
@@ -1697,7 +1716,7 @@ html.dark {
   padding: 20px 0;
   border-width: 1.5px 0;
   border-style: solid;
-  border-color: #d2d1d6;
+  border-color: var(--header-act-dropdown-border-color);
 }
 .act-dropdown__row {
   display: flex;
@@ -1735,7 +1754,7 @@ html.dark {
   width: 100%;
   flex-shrink: 0;
   padding-top: 100%;
-  border: 1.5px solid #ebebeb;
+  border: 1.5px solid var(--header-act-dropdown-border-color);
   border-radius: 10px;
 }
 .cart-preview-item__thumb {
