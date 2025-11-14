@@ -47,7 +47,7 @@
     justify-content: center;
     gap: 10px;
     
-    height: 44px;
+    height: 46px;
     border-radius: 6px;
     padding: 0 20px;
 
@@ -56,15 +56,19 @@
     font-size: 1.8rem;
     font-weight: 500;
     user-select: none;
+    white-space: nowrap;
 
-    .btn + .btn {
+    &--small {
+        height: 40px;
+    }
+    
+    + .btn {
         &:not(.btn--no-margin) {
             margin-left: 20px;
         }
     }
 
     &--text {
-        color: #9e9da8;
         font-weight: 400;
         background: transparent;
     }
