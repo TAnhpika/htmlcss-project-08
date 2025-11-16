@@ -334,7 +334,7 @@
     &__bottom {
         margin: 20px 0;
         padding: 20px 0;
-        border-width: 1.5px 0;
+        border-width: 1px 0;
         border-style: solid;
         border-color: var(--header-act-dropdown-border-color);
     }
@@ -388,7 +388,7 @@
         width: 100%;
         flex-shrink: 0;
         padding-top: 100%;
-        border: 1.5px solid var(--header-act-dropdown-border-color);
+        border: 1px solid var(--header-act-dropdown-border-color);
         border-radius: 10px;
     }
 
