@@ -54,6 +54,16 @@
         line-height: 144.444%;
     }
 
+    &__desc {
+        margin-top: 6px;
+        font-size: 1.5rem;
+        line-height: 146.667%;
+    }
+
+    &__form {
+        margin-bottom: 30px;
+    }
+    
     &__list {
         margin-top: -30px;
 
@@ -455,11 +465,11 @@
         font-size: 1.5rem;
         line-height: 146.667%;
     }
-    
+
     &__desc {
         margin-top: 4px;
         &--low {
-            color: #9E9DA8;
+            color: #9e9da8;
         }
     }
 
