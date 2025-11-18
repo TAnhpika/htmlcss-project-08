@@ -135,6 +135,12 @@ strong {
   font-weight: 600;
 }
 
+.separate {
+  margin: var(--margin) 0;
+  height: 1px;
+  background: var(--separate-color);
+}
+
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
@@ -1286,7 +1292,7 @@ html {
 }
 html {
   --header-act-dropdown-bg: #fff;
-  --header-act-dropdown-shadow: rgba(200, 200, 200, 0.40);
+  --header-act-dropdown-shadow: rgba(200, 200, 200, 0.4);
   --header-act-dropdown-border-color: #d2d1d6;
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
@@ -1361,6 +1367,12 @@ html {
   --checkout-payment-item-bg: #f6f6f6;
   --dialog-bg: #fff;
   --dialog-shadow: rgba(237, 237, 246, 0.2);
+  --profile-sidebar-bg: #fff;
+  --profile-sidebar-shadow: rgba(237, 237, 246, 0.2);
+  --profile-sidebar-link-hover: #ebebeb;
+  --account-info-bg: #f6f6f6;
+  --account-info-icon-bg: #fff;
+  --separate-color: #d2d1d6;
 }
 
 html.dark {
@@ -1439,9 +1451,15 @@ html.dark {
   --checkout-cart-info-shadow: rgba(23, 28, 40, 0.2);
   --checkout-border-color: #292e39;
   --checkout-gift-shadow: rgba(23, 28, 40, 0.2);
-  --checkout-payment-item-bg: #292E39;
+  --checkout-payment-item-bg: #292e39;
   --dialog-bg: #2f3441;
   --dialog-shadow: rgba(23, 28, 40, 0.4);
+  --profile-sidebar-bg: #171c28;
+  --profile-sidebar-shadow: rgba(23, 28, 40, 0.2);
+  --profile-sidebar-link-hover: #2f3441;
+  --account-info-bg: #292e39;
+  --account-info-icon-bg: #171c28;
+  --separate-color: #292e39;
 }
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -3352,6 +3370,7 @@ html.dark {
   justify-content: center;
   gap: 14px;
   height: 100%;
+  min-height: 170px;
   border-radius: 10px;
   border: 1px dashed var(--Secondary-Color-Secondary-3, #d2d1d6);
 }
@@ -3367,16 +3386,16 @@ html.dark {
   gap: 10px;
   padding: 10px;
   border-radius: 10px;
-  background: var(--Background-2, #f6f6f6);
+  background: var(--account-info-bg);
 }
 .account-info__icon {
-  width: 54px;
-  height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 54px;
+  height: 54px;
   border-radius: 8px;
-  background: #fff;
+  background: var(--account-info-icon-bg);
 }
 .account-info__title {
   font-size: 1.5rem;
@@ -3396,7 +3415,11 @@ html.dark {
 }
 .favourite-item__thumb {
   width: 110px;
-  object-fit: contain;
+}
+@media (max-width: 991.98px) {
+  .favourite-item__thumb {
+    width: 80px;
+  }
 }
 .favourite-item__title {
   font-size: 1.5rem;
@@ -3409,14 +3432,16 @@ html.dark {
   align-items: center;
   gap: 20px;
 }
+@media (max-width: 575.98px) {
+  .favourite-item__content {
+    flex-direction: column;
+    align-items: start;
+  }
+}
 .favourite-item__price {
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 146.667%;
-}
-
-.favourite-item + .favourite-item {
-  margin-top: 40px;
 }
 
 .home {
@@ -4380,8 +4405,8 @@ html.dark {
 .profile__sidebar {
   padding-bottom: 30px;
   border-radius: 20px;
-  background: var(--Secondary-Color-Background, #fff);
-  box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.2);
+  background: var(--profile-sidebar-bg);
+  box-shadow: 0 20px 60px 10px var(--profile-sidebar-shadow);
   overflow: hidden;
 }
 .profile-user {
@@ -4389,7 +4414,7 @@ html.dark {
   flex-direction: column;
   align-items: center;
   background: linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1a162e 100%), url("../img/profile/cover.png") no-repeat center/cover;
-  box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.2);
+  box-shadow: 0 20px 60px 10px var(--profile-sidebar-shadow);
   color: #fafafd;
   padding: 40px 20px 20px;
 }
@@ -4436,9 +4461,10 @@ html.dark {
   line-height: 146.667%;
   border-radius: 5px;
   transition: background-color 0.2s;
+  white-space: nowrap;
 }
 .profile-menu__link:hover {
-  background: #ebebeb;
+  background: var(--profile-sidebar-link-hover);
 }
 .profile-menu__icon {
   width: 24px;
