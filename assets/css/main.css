@@ -3361,6 +3361,64 @@ html.dark {
   line-height: 142.857%;
 }
 
+.account-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--Background-2, #f6f6f6);
+}
+.account-info__icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #fff;
+}
+.account-info__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.account-info__desc {
+  margin-top: 6px;
+  font-size: 1.4rem;
+  line-height: 142.857%;
+}
+
+.favourite-item {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+.favourite-item__thumb {
+  width: 110px;
+  object-fit: contain;
+}
+.favourite-item__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.favourite-item__content {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.favourite-item__price {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+
+.favourite-item + .favourite-item {
+  margin-top: 40px;
+}
+
 .home {
   margin-bottom: 50px;
 }
