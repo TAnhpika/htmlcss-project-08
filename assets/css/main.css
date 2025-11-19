@@ -3934,10 +3934,18 @@ html.dark {
   justify-content: space-between;
   gap: 30px;
 }
+.cart-info__back-arrow {
+  position: relative;
+  top: 4px;
+  width: 50px;
+  padding-right: 20px;
+}
 .cart-info__heading {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 141.667%;
+  display: flex;
+  align-items: center;
 }
 .cart-info__heading--lv2 {
   font-size: 2.2rem;
@@ -4475,6 +4483,13 @@ html.dark {
 }
 .profile__desc {
   margin-bottom: 16px;
+}
+
+.form-card__bottom {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 /*# sourceMappingURL=main.css.map */
