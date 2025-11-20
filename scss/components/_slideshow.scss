@@ -12,7 +12,7 @@
         position: relative;
         flex-shrink: 0;
         width: 100%;
-        padding-top: 34%; // 455 / 1340 - space for loading img
+        padding-top: 26%; // 455 / 1340 = 34 - space for loading img
 
         @include abstracts.screen(md) {
             padding-top: 50%;
